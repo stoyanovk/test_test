@@ -10,7 +10,6 @@ function Button({ onClick }) {
         <span className={classes.crossItem} />
         <span className={classes.crossItem} />
       </span>
-
       <span className={classes.text}>Add Service</span>
     </button>
   );

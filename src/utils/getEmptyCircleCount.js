@@ -19,6 +19,5 @@ export default function getEmptyCircleCount(emptyCircleCount, serviceIndex) {
   if (serviceIndex === 3) {
     return emptyCircleCount - 2;
   }
-
-  return emptyCircleCount - 3;
+  return emptyCircleCount;
 }

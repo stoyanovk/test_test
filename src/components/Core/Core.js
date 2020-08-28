@@ -74,9 +74,11 @@ export default function Core() {
               </div>
             ))
           : null}
-        <div className={classes.bigCirclePosition}>
-          <Button onClick={handleClick} />
-        </div>
+        {state.services.length !== 5 ? (
+          <div className={classes.bigCirclePosition}>
+            <Button onClick={handleClick} />
+          </div>
+        ) : null}
       </div>
       <div>{renderEmptyCircle(state.emptyCircleCount)}</div>
       <div className={classes.circle}>
