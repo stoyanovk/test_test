@@ -1,7 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import useStyles from "./style";
 
-export default function EmptyCircle() {
+function EmptyCircle() {
   const classes = useStyles();
   return <div className={classes.circle} />;
 }
+export default memo(EmptyCircle);

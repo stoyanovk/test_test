@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { func } from "prop-types";
 import useStyles from "./style";
 
-export default function Button({ onClick }) {
+function Button({ onClick }) {
   const classes = useStyles();
   return (
     <button type="button" className={classes.box} onClick={onClick}>
@@ -19,3 +19,5 @@ export default function Button({ onClick }) {
 Button.propTypes = {
   onClick: func.isRequired,
 };
+
+export default memo(Button);

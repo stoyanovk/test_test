@@ -22,7 +22,13 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "halo-lab"
+    "extends": "halo-lab",
+    "rules": {
+      "no-param-reassign": "off",
+      "indent":"off",
+      "no-plusplus": "off",
+      "no-return-assign": "off"
+    }
   },
   "browserslist": {
     "production": [

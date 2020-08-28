@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { string } from "prop-types";
 import useStyles from "./style";
 
-export default function FullCircle({ icon, title }) {
+function FullCircle({ icon, title }) {
   const classes = useStyles();
   return (
     <div className={classes.box}>
@@ -16,3 +16,5 @@ FullCircle.propTypes = {
   icon: string.isRequired,
   title: string.isRequired,
 };
+
+export default memo(FullCircle);
