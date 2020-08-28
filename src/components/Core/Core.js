@@ -10,9 +10,18 @@ import useStyles from "./style";
 
 import houseImage from "./images/house.svg";
 
-function renderEmptyCircle(iteration) {
+const EMPTY_CIRCLE_INIT_NUM = 8;
+const INITIAL_PRICE = 8;
+
+/**
+ * renders appropriate number of EmptyCircle components
+ * @param {Number} emptyCirclesNum
+ *
+ * @returns {Components} - EmptyCircle components
+ */
+function renderEmptyCircle(emptyCirclesNum) {
   const circles = [];
-  for (let i = 0; i <= iteration; i++) {
+  for (let i = 0; i <= emptyCirclesNum; i++) {
     circles.push(<EmptyCircle key={i} />);
   }
   return circles;
@@ -21,8 +30,9 @@ function renderEmptyCircle(iteration) {
 const initialState = {
   serviceIndex: 0,
   services: [],
-  emptyCircleCount: 8, //We have 8 empty circle on the start
+  emptyCircleCount: EMPTY_CIRCLE_INIT_NUM,
 };
+
 export default function Core() {
   const classes = useStyles();
 
@@ -36,7 +46,7 @@ export default function Core() {
       setState((state) => {
         const newEmptyCircleCount = getEmptyCircleCount(
           state.emptyCircleCount,
-          state.serviceIndex,
+          state.serviceIndex
         );
 
         return {
@@ -50,7 +60,9 @@ export default function Core() {
     }
   }, [state.serviceIndex]);
 
-  const priceSum = state.services.length ? getPriceSum(state.services) : 0;
+  const priceSum = state.services.length
+    ? getPriceSum(state.services)
+    : INITIAL_PRICE;
 
   return (
     <div className={classes.container}>

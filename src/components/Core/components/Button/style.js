@@ -13,10 +13,10 @@ const useStyles = makeStyles({
     borderRadius: "50%",
     border: "none",
     cursor: "pointer",
-    transition: "transform 0.3s ease-in-out",
+    transition: "transform 0.1s ease-in-out",
     outline: "none",
     "&:active": {
-      transform: "scale(0.8)",
+      transform: "scale(0.98)",
     },
     "&:focus": {
       border: "2px solid #3e3b48",
