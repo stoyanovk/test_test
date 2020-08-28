@@ -14,8 +14,12 @@ const useStyles = makeStyles({
     border: "none",
     cursor: "pointer",
     transition: "transform 0.3s ease-in-out",
+    outline: "none",
     "&:active": {
       transform: "scale(0.8)",
+    },
+    "&:focus": {
+      border: "2px solid #3e3b48",
     },
   },
   cross: {
