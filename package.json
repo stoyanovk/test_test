@@ -25,7 +25,7 @@
     "extends": "halo-lab",
     "rules": {
       "no-param-reassign": "off",
-      "indent":"off",
+      "indent": "off",
       "no-plusplus": "off",
       "no-return-assign": "off"
     }
