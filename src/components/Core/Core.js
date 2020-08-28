@@ -27,11 +27,6 @@ export default function Core() {
   const classes = useStyles();
 
   const [state, setState] = useState(initialState);
-  // const [serviceIndex, setServiceIndex] = useState(0);
-
-  // const [services, setServices] = useState([]);
-
-  // const [emptyCircleCount, setEmptyCircleCount] = useState(8);
 
   const handleClick = useCallback(async () => {
     try {
@@ -41,7 +36,7 @@ export default function Core() {
       setState((state) => {
         const newEmptyCircleCount = getEmptyCircleCount(
           state.emptyCircleCount,
-          state.serviceIndex
+          state.serviceIndex,
         );
 
         return {
